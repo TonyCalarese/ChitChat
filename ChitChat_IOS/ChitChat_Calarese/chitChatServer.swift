@@ -11,7 +11,7 @@
 
 import Foundation
 
-class contentLoader{
+class chitChatServer{
     var data: Data?
     let API_KEY: String = "e781c246-6636-4e06-acd9-f5047b312508"
     let API_EMAIL: String = "anthony.calarese@mymail.champlain.edu"
@@ -19,53 +19,26 @@ class contentLoader{
     let LIKE_URL: String = "https://www.stepoutnyc.com/chitchat/like/"
     let DISLIKE_URL: String = "https://www.stepoutnyc.com/chitchat/dislike/"
 
-     var messages: [String] = []
-     var ids: [String] = []
-     var dates: [String] = []
-     var dislikes: [String] = []
-     var likes: [String] = []
-     var clients: [String] = []
-     
-    func getCount() -> Int{
-         return messages.count // getting the size for number of cells
-     }
     //Creating all the URLS
     func concatURL() -> String{
-        //Translate to:https://www.stepoutnyc.com/chitchat?client=anthony.calarese@mymail.champlain.edu&key=e781c246-6636-4e06-acd9-f5047b312508
         return URL + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
     }
     func concatLIKEURL(id: String) -> String {
         return LIKE_URL + id + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
-        
     }
     func concatDISLIKEURL(id: String) -> String {
         return DISLIKE_URL + id + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
         
     }
+    func concatMESSAGEURL(message: String) -> String {
+           return URL + "?" + "client=" + API_EMAIL + "&key=" + API_KEY + "&message=" + message
+       }
      
-     func getAllItems(index: Int) -> (String, String, String, String, String, String) {
-         return (messages[index], ids[index], dates[index], dislikes[index], likes[index], clients[index])
-     }
-    func getAllItems() -> [String]{
-        return messages
-        
-    }
-     func addContent(message: String, id: String, date: String, dislikes: String, likes: String, client: String) {
-         
-         self.messages.append(message)
-         self.ids.append(id)
-         self.dates.append(date)
-         self.dislikes.append(String(dislikes))
-         self.likes.append(String(likes))
-         self.clients.append(client)
-         
-     }
- //Asynchronous Functions
-    func downloadContentURLs() -> Void{
-          let chitchat = concatURL() //My special URL
+
+    func downloadContent() -> Void{
+          let chitchat = concatURL() //Concat the URL
           guard let textURL = Foundation.URL(string: chitchat) else {
               print("ERROR WITH URL")
-              print(chitchat)
               return
           } //convert string to url
           //get either data, response, or error message
@@ -85,8 +58,6 @@ class contentLoader{
           }.resume()
       }
 
-    
-    //Code heavily refernces wikipedia lab from week 12
        func parseJSON(data: Data, completion: @escaping (Error?, [MESSAGE]?) -> Void) {
            print("Made it to the ParseJson")
            do {
@@ -96,34 +67,18 @@ class contentLoader{
                
                //Code Refernced from Wikipedia lab
                let JSON_Decoder = JSONDecoder()
-               
-                   //Helpful code from Kopec
                    struct MessageService: Decodable{
                        let count: Int
                        let date: String
                        let messages: [MESSAGE]
                        
-
                    }
                  
 
                 let messageService = try JSON_Decoder.decode(MessageService.self, from: data)
                 completion(nil, messageService.messages)
                    print("Completed the parsing")
-            /*
-                   let size = messageService.count
-                   //func addContent(message: String, id: String, date: String, dislikes_label: String, likes: String, client: String)
-                   
-                   for index in 0...size-1 {
-                       //<#T##String#>messageService.messages[index]._id
-                    //print(messageService.messages[index].message)
-                    self.addContent(message: messageService.messages[index].message, id: messageService.messages[index]._id,
-                                  date: messageService.messages[index].date, dislikes: String(messageService.messages[index].dislikes),
-                                  likes: String(messageService.messages[index].likes), client: messageService.messages[index].client )
-            
-            
-                   }
- */
+         
            } catch let error{
                print("Error Creating JSON Object : \(error) ")
            }

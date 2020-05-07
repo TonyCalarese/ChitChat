@@ -10,15 +10,10 @@ import UIKit
 
 class ChitChatTableViewController: UITableViewController {
     //Data Structure
-    var server = contentLoader() //Declare the class for the items
+    var server = chitChatServer() //Declare the class for the items
     var messages: [MESSAGE] = []
     
-    let API_KEY: String = "e781c246-6636-4e06-acd9-f5047b312508"
-    let API_EMAIL: String = "anthony.calarese@mymail.champlain.edu"
-    let URL: String = "https://www.stepoutnyc.com/chitchat"
-    let LIKE_URL: String = "https://www.stepoutnyc.com/chitchat/like/"
-    let DISLIKE_URL: String = "https://www.stepoutnyc.com/chitchat/dislike/"
-    
+   
     @IBOutlet weak var msgText: UITextField!
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -31,26 +26,6 @@ class ChitChatTableViewController: UITableViewController {
         super.viewDidLoad()
         downloadContent()
     }
-    
-    //Creating all the URLS
-    func concatURL() -> String{
-        //Translate to:https://www.stepoutnyc.com/chitchat?client=anthony.calarese@mymail.champlain.edu&key=e781c246-6636-4e06-acd9-f5047b312508
-        return URL + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
-    }
-    func concatLIKEURL(id: String) -> String {
-        return LIKE_URL + id + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
-        
-    }
-    func concatDISLIKEURL(id: String) -> String {
-        return DISLIKE_URL + id + "?" + "client=" + API_EMAIL + "&" + "key=" + API_KEY
-        
-    }
-    func concatMESSAGEURL(message: String) -> String {
-        return URL + "?" + "client=" + API_EMAIL + "&key=" + API_KEY + "&message=" + message
-        
-    }
-   
-   
     // MARK: - Table view data source
     //Table View Functions
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -81,7 +56,7 @@ class ChitChatTableViewController: UITableViewController {
     
     //Download the JSON
     func downloadContent() -> Void{
-        let chitchat = concatURL() //My special URL
+        let chitchat = server.concatURL() //My special URL
         guard let textURL = Foundation.URL(string: chitchat) else {
             print("ERROR WITH URL")
             print(chitchat)
@@ -121,32 +96,32 @@ class ChitChatTableViewController: UITableViewController {
         if let sendingMsg = msgText.text{
            let postMsg = sendingMsg.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         
-        let MsgURL = concatMESSAGEURL(message: postMsg!) //Getting url
-        print(MsgURL)
-        guard let postURL = Foundation.URL(string: MsgURL) else {
+            let MsgURL = server.concatMESSAGEURL(message: postMsg!) //Getting url
+            guard let postURL = Foundation.URL(string: MsgURL) else {
             print("Cannot get URL")
-            return }
+            return
+                }
         
-        //Helpful code from kopec
-        var urlRequest = URLRequest(url: postURL)
-        urlRequest.httpMethod = "POST"
-        URLSession.shared.dataTask(with: urlRequest) {(data: Data?, response: URLResponse?, error: Error?) in
-            if let error = error { // error is nil if there was none
-                print(" Error Getting Data: \(error.localizedDescription)")
-            }
-            if let data = data {
-                print(data)
-            }
-            if let response = response{
-                print(response)
-            }
-            DispatchQueue.main.async {
-                print("Re-getting the data")
-                self.downloadContent()
-                
-            }
-        //This should give the usr back the JSON Text
-        }.resume()
+            
+            var urlRequest = URLRequest(url: postURL)
+            urlRequest.httpMethod = "POST"
+            URLSession.shared.dataTask(with: urlRequest) {(data: Data?, response: URLResponse?, error: Error?) in
+                if let error = error { // error is nil if there was none
+                    print(" Error Getting Data: \(error.localizedDescription)")
+                }
+                if let data = data {
+                    print(data)
+                }
+                if let response = response{
+                    print(response)
+                }
+                DispatchQueue.main.async {
+                    print("Re-getting the data")
+                    self.downloadContent()
+                    
+                }
+            //This should give the usr back the JSON Text
+            }.resume()
     }
     }
 

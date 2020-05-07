@@ -16,7 +16,7 @@
 		C0683E3E244E4ABB003B2A19 /* ChitChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */; };
 		C0683E40244E4B26003B2A19 /* ChitChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */; };
 		C0E012E5245A1D6500DCC4E6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E012E4245A1D6500DCC4E6 /* Message.swift */; };
-		C0E527D12454C1DE00E40186 /* contentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E527D02454C1DE00E40186 /* contentLoader.swift */; };
+		C0E527D12454C1DE00E40186 /* chitChatServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E527D02454C1DE00E40186 /* chitChatServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitChatTableViewCell.swift; sourceTree = "<group>"; };
 		C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitChatTableViewController.swift; sourceTree = "<group>"; };
 		C0E012E4245A1D6500DCC4E6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		C0E527D02454C1DE00E40186 /* contentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentLoader.swift; sourceTree = "<group>"; };
+		C0E527D02454C1DE00E40186 /* chitChatServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chitChatServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				C0683E26244E42FA003B2A19 /* SceneDelegate.swift */,
 				C0683E2A244E42FA003B2A19 /* Main.storyboard */,
 				C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */,
-				C0E527D02454C1DE00E40186 /* contentLoader.swift */,
+				C0E527D02454C1DE00E40186 /* chitChatServer.swift */,
 				C0E012E4245A1D6500DCC4E6 /* Message.swift */,
 				C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */,
 				C0683E30244E42FB003B2A19 /* Assets.xcassets */,
@@ -150,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0E527D12454C1DE00E40186 /* contentLoader.swift in Sources */,
+				C0E527D12454C1DE00E40186 /* chitChatServer.swift in Sources */,
 				C0683E2F244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld in Sources */,
 				C0683E3E244E4ABB003B2A19 /* ChitChatTableViewCell.swift in Sources */,
 				C0683E40244E4B26003B2A19 /* ChitChatTableViewController.swift in Sources */,

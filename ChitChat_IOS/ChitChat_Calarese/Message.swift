@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//Structure used for parsing JSON contents
 struct MESSAGE: Decodable {
                      var _id: String
                      var client: String
