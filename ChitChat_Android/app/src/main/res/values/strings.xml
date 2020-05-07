@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChitChatTonyCalarese</string>
+    <string name="new_message">Type Here to Submit a Chat</string>
+    <string name="quit">QUIT</string>
+    <string name="like">LIKE</string>
+    <string name="dislike">DISLIKE</string>
+    <string name="date">DATE</string>
+    <string name="default_text">DEFAULT</string>
+    <string name="post">POST</string>
+</resources>

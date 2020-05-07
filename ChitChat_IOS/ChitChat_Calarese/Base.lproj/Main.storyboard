@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BbI-VL-BSg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chit Chat Table View Controller-->
+        <scene sceneID="bAZ-aV-N64">
+            <objects>
+                <tableViewController id="BbI-VL-BSg" customClass="ChitChatTableViewController" customModule="ChitChat_Calarese" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w59-DU-hI6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="kf8-FH-wdS">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem id="0Zj-4g-3nT">
+                                    <barButtonItem key="leftBarButtonItem" style="plain" id="bQ5-gT-RIe">
+                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Message Here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="2hn-ag-pYD">
+                                            <rect key="frame" x="20" y="5" width="171" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" style="plain" id="dod-y9-mf4">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KZK-BD-E2B">
+                                            <rect key="frame" x="197" y="11" width="197" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="paperplane.fill" catalog="system">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="sendMessage:" destination="BbI-VL-BSg" eventType="touchUpInside" id="WbK-cz-EYT"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chitchatcell" rowHeight="149" id="h4N-15-txn" customClass="ChitChatTableViewCell" customModule="ChitChat_Calarese" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="149"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4N-15-txn" id="tMY-DX-U0t">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jk9-hH-i7k">
+                                            <rect key="frame" x="14" y="53" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Date Will be here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-5T-42q">
+                                            <rect key="frame" x="20" y="11" width="315" height="25.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN2-U1-Uta">
+                                            <rect key="frame" x="22" y="106" width="34" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dislikes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10C-Hf-cjP">
+                                            <rect key="frame" x="250" y="105" width="56.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNH-72-kVh">
+                                            <rect key="frame" x="90" y="94" width="46" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="hOg-F4-cxD"/>
+                                            </constraints>
+                                            <state key="normal" image="hand.thumbsup.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="like_message:" destination="h4N-15-txn" eventType="touchUpInside" id="Zi5-Fg-4br"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TE-qh-aY0">
+                                            <rect key="frame" x="334" y="85" width="51" height="57"/>
+                                            <state key="normal" title="Dislike Button" image="hand.thumbsdown.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="dislike_message:" destination="h4N-15-txn" eventType="touchUpInside" id="hul-BN-Gl3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1TE-qh-aY0" firstAttribute="leading" secondItem="tMY-DX-U0t" secondAttribute="leading" constant="334" id="1Fl-xe-oYM"/>
+                                        <constraint firstAttribute="bottom" secondItem="jk9-hH-i7k" secondAttribute="bottom" constant="75.5" id="1di-p3-goq"/>
+                                        <constraint firstItem="10C-Hf-cjP" firstAttribute="leading" secondItem="tMY-DX-U0t" secondAttribute="leading" constant="250" id="9hg-PC-AyP"/>
+                                        <constraint firstAttribute="bottom" secondItem="1TE-qh-aY0" secondAttribute="bottom" constant="7" id="9ic-iE-eMG"/>
+                                        <constraint firstItem="JN2-U1-Uta" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="106" id="CaB-ex-6LF"/>
+                                        <constraint firstAttribute="trailing" secondItem="JN2-U1-Uta" secondAttribute="trailing" constant="358" id="HQN-GR-e9Q"/>
+                                        <constraint firstItem="cNH-72-kVh" firstAttribute="leading" secondItem="tMY-DX-U0t" secondAttribute="leading" constant="90" id="JRH-dK-jve"/>
+                                        <constraint firstAttribute="bottom" secondItem="cNH-72-kVh" secondAttribute="bottom" constant="15" id="JjA-m0-NmE"/>
+                                        <constraint firstAttribute="bottom" secondItem="UlH-5T-42q" secondAttribute="bottom" constant="112.5" id="KVS-3G-qBY"/>
+                                        <constraint firstItem="1TE-qh-aY0" firstAttribute="leading" secondItem="10C-Hf-cjP" secondAttribute="trailing" constant="8" id="LxS-Gx-14H"/>
+                                        <constraint firstItem="JN2-U1-Uta" firstAttribute="leading" secondItem="tMY-DX-U0t" secondAttribute="leading" constant="22" id="OBX-AI-te5"/>
+                                        <constraint firstItem="jk9-hH-i7k" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="53" id="QG3-Mw-rNC"/>
+                                        <constraint firstItem="1TE-qh-aY0" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="85" id="Qlx-Bp-nhV"/>
+                                        <constraint firstItem="UlH-5T-42q" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="11" id="QpK-aP-QdG"/>
+                                        <constraint firstAttribute="trailing" secondItem="UlH-5T-42q" secondAttribute="trailing" constant="79" id="R96-9F-og1"/>
+                                        <constraint firstItem="UlH-5T-42q" firstAttribute="leading" secondItem="tMY-DX-U0t" secondAttribute="leading" constant="20" id="Rze-Ka-oIH"/>
+                                        <constraint firstItem="1TE-qh-aY0" firstAttribute="leading" secondItem="10C-Hf-cjP" secondAttribute="trailing" constant="8" id="Ukh-5R-Rgj"/>
+                                        <constraint firstAttribute="trailing" secondItem="1TE-qh-aY0" secondAttribute="trailing" constant="29" id="VeK-5t-tiF"/>
+                                        <constraint firstItem="10C-Hf-cjP" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="105" id="Vyf-QN-keK"/>
+                                        <constraint firstAttribute="bottom" secondItem="10C-Hf-cjP" secondAttribute="bottom" constant="23" id="cSf-oS-36K"/>
+                                        <constraint firstAttribute="bottom" secondItem="JN2-U1-Uta" secondAttribute="bottom" constant="22.5" id="fAr-FC-Up9"/>
+                                        <constraint firstItem="cNH-72-kVh" firstAttribute="top" secondItem="tMY-DX-U0t" secondAttribute="top" constant="86" id="vjg-p4-To1"/>
+                                        <constraint firstAttribute="trailing" secondItem="cNH-72-kVh" secondAttribute="trailing" constant="278" id="y0d-9j-en0"/>
+                                        <constraint firstAttribute="trailing" secondItem="10C-Hf-cjP" secondAttribute="trailing" constant="107.5" id="ynq-IF-hRP"/>
+                                        <constraint firstItem="jk9-hH-i7k" firstAttribute="centerY" secondItem="tMY-DX-U0t" secondAttribute="centerY" id="zvz-sc-Kbt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date_label" destination="UlH-5T-42q" id="fqw-2u-h3u"/>
+                                    <outlet property="dislike_button" destination="1TE-qh-aY0" id="Wv3-6h-gMI"/>
+                                    <outlet property="dislikes_label" destination="10C-Hf-cjP" id="Qg2-Ii-iob"/>
+                                    <outlet property="like_button" destination="cNH-72-kVh" id="b5f-EA-zhN"/>
+                                    <outlet property="likes_label" destination="JN2-U1-Uta" id="qme-bA-zmY"/>
+                                    <outlet property="message_label" destination="jk9-hH-i7k" id="oE2-K5-sOp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BbI-VL-BSg" id="Eoa-TJ-ZrJ"/>
+                            <outlet property="delegate" destination="BbI-VL-BSg" id="sTC-tu-clR"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="msgText" destination="2hn-ag-pYD" id="56Q-5J-vca"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a2-FV-YIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.0434782608697" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="124"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="124"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

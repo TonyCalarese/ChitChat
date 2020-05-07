@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0683E25244E42FA003B2A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E24244E42FA003B2A19 /* AppDelegate.swift */; };
+		C0683E27244E42FA003B2A19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E26244E42FA003B2A19 /* SceneDelegate.swift */; };
+		C0683E2C244E42FA003B2A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0683E2A244E42FA003B2A19 /* Main.storyboard */; };
+		C0683E2F244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0683E2D244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld */; };
+		C0683E31244E42FB003B2A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0683E30244E42FB003B2A19 /* Assets.xcassets */; };
+		C0683E34244E42FB003B2A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0683E32244E42FB003B2A19 /* LaunchScreen.storyboard */; };
+		C0683E3E244E4ABB003B2A19 /* ChitChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */; };
+		C0683E40244E4B26003B2A19 /* ChitChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */; };
+		C0E012E5245A1D6500DCC4E6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E012E4245A1D6500DCC4E6 /* Message.swift */; };
+		C0E527D12454C1DE00E40186 /* contentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E527D02454C1DE00E40186 /* contentLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C0683E21244E42FA003B2A19 /* ChitChat_Calarese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChitChat_Calarese.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0683E24244E42FA003B2A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0683E26244E42FA003B2A19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C0683E2B244E42FA003B2A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0683E2E244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChitChat_Calarese.xcdatamodel; sourceTree = "<group>"; };
+		C0683E30244E42FB003B2A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0683E33244E42FB003B2A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0683E35244E42FB003B2A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitChatTableViewCell.swift; sourceTree = "<group>"; };
+		C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitChatTableViewController.swift; sourceTree = "<group>"; };
+		C0E012E4245A1D6500DCC4E6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C0E527D02454C1DE00E40186 /* contentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0683E1E244E42FA003B2A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0683E18244E42FA003B2A19 = {
+			isa = PBXGroup;
+			children = (
+				C0683E23244E42FA003B2A19 /* ChitChat_Calarese */,
+				C0683E22244E42FA003B2A19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0683E22244E42FA003B2A19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0683E21244E42FA003B2A19 /* ChitChat_Calarese.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0683E23244E42FA003B2A19 /* ChitChat_Calarese */ = {
+			isa = PBXGroup;
+			children = (
+				C0683E24244E42FA003B2A19 /* AppDelegate.swift */,
+				C0683E26244E42FA003B2A19 /* SceneDelegate.swift */,
+				C0683E2A244E42FA003B2A19 /* Main.storyboard */,
+				C0683E3F244E4B26003B2A19 /* ChitChatTableViewController.swift */,
+				C0E527D02454C1DE00E40186 /* contentLoader.swift */,
+				C0E012E4245A1D6500DCC4E6 /* Message.swift */,
+				C0683E3D244E4ABB003B2A19 /* ChitChatTableViewCell.swift */,
+				C0683E30244E42FB003B2A19 /* Assets.xcassets */,
+				C0683E32244E42FB003B2A19 /* LaunchScreen.storyboard */,
+				C0683E35244E42FB003B2A19 /* Info.plist */,
+				C0683E2D244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld */,
+			);
+			path = ChitChat_Calarese;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0683E20244E42FA003B2A19 /* ChitChat_Calarese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0683E38244E42FB003B2A19 /* Build configuration list for PBXNativeTarget "ChitChat_Calarese" */;
+			buildPhases = (
+				C0683E1D244E42FA003B2A19 /* Sources */,
+				C0683E1E244E42FA003B2A19 /* Frameworks */,
+				C0683E1F244E42FA003B2A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChitChat_Calarese;
+			productName = ChitChat_Calarese;
+			productReference = C0683E21244E42FA003B2A19 /* ChitChat_Calarese.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0683E19244E42FA003B2A19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Tony Calarese";
+				TargetAttributes = {
+					C0683E20244E42FA003B2A19 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C0683E1C244E42FA003B2A19 /* Build configuration list for PBXProject "ChitChat_Calarese" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0683E18244E42FA003B2A19;
+			productRefGroup = C0683E22244E42FA003B2A19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0683E20244E42FA003B2A19 /* ChitChat_Calarese */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0683E1F244E42FA003B2A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0683E34244E42FB003B2A19 /* LaunchScreen.storyboard in Resources */,
+				C0683E31244E42FB003B2A19 /* Assets.xcassets in Resources */,
+				C0683E2C244E42FA003B2A19 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0683E1D244E42FA003B2A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0E527D12454C1DE00E40186 /* contentLoader.swift in Sources */,
+				C0683E2F244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld in Sources */,
+				C0683E3E244E4ABB003B2A19 /* ChitChatTableViewCell.swift in Sources */,
+				C0683E40244E4B26003B2A19 /* ChitChatTableViewController.swift in Sources */,
+				C0683E25244E42FA003B2A19 /* AppDelegate.swift in Sources */,
+				C0683E27244E42FA003B2A19 /* SceneDelegate.swift in Sources */,
+				C0E012E5245A1D6500DCC4E6 /* Message.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0683E2A244E42FA003B2A19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0683E2B244E42FA003B2A19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0683E32244E42FB003B2A19 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0683E33244E42FB003B2A19 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0683E36244E42FB003B2A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0683E37244E42FB003B2A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0683E39244E42FB003B2A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y34UQ473KZ;
+				INFOPLIST_FILE = ChitChat_Calarese/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Calarese.ChitChat-Calarese";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0683E3A244E42FB003B2A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y34UQ473KZ;
+				INFOPLIST_FILE = ChitChat_Calarese/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tony-Calarese.ChitChat-Calarese";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0683E1C244E42FA003B2A19 /* Build configuration list for PBXProject "ChitChat_Calarese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0683E36244E42FB003B2A19 /* Debug */,
+				C0683E37244E42FB003B2A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0683E38244E42FB003B2A19 /* Build configuration list for PBXNativeTarget "ChitChat_Calarese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0683E39244E42FB003B2A19 /* Debug */,
+				C0683E3A244E42FB003B2A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0683E2D244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0683E2E244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodel */,
+			);
+			currentVersion = C0683E2E244E42FA003B2A19 /* ChitChat_Calarese.xcdatamodel */;
+			path = ChitChat_Calarese.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C0683E19244E42FA003B2A19 /* Project object */;
+}
